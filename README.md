@@ -1,6 +1,7 @@
 # CarlosalurbanCrud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+After Clone the repo remember to do 'npm i' for install the packages from node modules.
 
 ## Development server
 
