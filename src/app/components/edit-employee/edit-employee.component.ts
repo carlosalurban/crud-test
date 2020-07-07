@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { EmployeesService } from 'src/app/services/employees.service';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Employee } from 'src/app/models/employee.model';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
-  selector: 'app-employees-detail',
-  templateUrl: './employees-detail.component.html',
-  styleUrls: ['./employees-detail.component.scss']
+  selector: 'app-edit-employee',
+  templateUrl: './edit-employee.component.html',
+  styleUrls: ['./edit-employee.component.scss']
 })
-export class EmployeesDetailComponent implements OnInit {
+export class EditEmployeeComponent implements OnInit {
   idEmployee: any;
   employeeById: any;
 

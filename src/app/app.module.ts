@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 
 import { AddEmployeesComponent } from './components/add-employees/add-employees.component';
-import { EmployeesDetailComponent } from './components/employees-detail/employees-detail.component';
+import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -22,7 +22,7 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [
     AddEmployeesComponent,
     AppComponent,
-    EmployeesDetailComponent,
+    EditEmployeeComponent,
     HomeComponent
   ],
   imports: [
