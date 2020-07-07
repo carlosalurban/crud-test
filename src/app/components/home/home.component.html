@@ -1,0 +1,44 @@
+<table *ngIf="employeesList" mat-table [dataSource]="employeesList" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id.</th>
+        <td mat-cell *matCellDef="let employee">{{employee.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="employee_name">
+        <th mat-header-cell *matHeaderCellDef> Name</th>
+        <td mat-cell *matCellDef="let employee"> {{employee.employee_name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="employee_age">
+        <th mat-header-cell *matHeaderCellDef> Age</th>
+        <td mat-cell *matCellDef="let employee"> {{employee.employee_age}} </td>
+    </ng-container>
+    <ng-container matColumnDef="employee_salary">
+        <th mat-header-cell *matHeaderCellDef>salary</th>
+        <td mat-cell *matCellDef="let employee"> {{employee.employee_salary}} </td>
+    </ng-container>
+    <!-- actions -->
+    <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>
+            <button mat-icon-button color="primary" (click)="addNewEmployee()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-header-cell>
+
+        <mat-cell *matCellDef="let employee; let i=index;">
+            <button mat-icon-button color="accent" [routerLink]="['/employees/', employee.id ]"
+                routerLinkActive="router-link-active">
+                <mat-icon aria-label="Edit">edit</mat-icon>
+            </button>
+
+            <button mat-icon-button color="accent" (click)="deleteEmployee(employee.id)">
+                <mat-icon aria-label="Delete">delete</mat-icon>
+            </button>
+        </mat-cell>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="row-hover">
+    </tr>
+</table>

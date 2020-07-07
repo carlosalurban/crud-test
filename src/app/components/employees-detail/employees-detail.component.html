@@ -1,0 +1,12 @@
+<form [formGroup]="employeeForm" (submit)="onSubmit()">
+    <div class="form-group col-10">
+        <label>Name</label>
+        <input type="text" class="form-control" #nameEmployee name="name-field" required formControlName="name">
+        <label>Salary</label>
+        <input type="text" class="form-control" #salary name="salary-field" required formControlName="salary">
+        <label>Age</label>
+        <input type="text" class="form-control" #age name="age-field" required formControlName="age">
+    </div>
+    <div class="col-10"></div>
+    <button class="btn btn-primary">Submit</button>
+</form>
