@@ -11,11 +11,12 @@ import { AddEmployeesComponent } from './components/add-employees/add-employees.
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 
 // ANGULAR MATERIAL
 
-import { MatTableModule } from '@angular/material/table';
 
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatTableModule } from '@angular/material/table';
     AddEmployeesComponent,
     AppComponent,
     EditEmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    NavBarComponent
   ],
   imports: [
     AppRoutingModule,
